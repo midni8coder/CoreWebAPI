@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "d0acc6d8-6b85-4a2b-a076-0a23bc45dcb7",
+		"name": "Core web api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16489995",
+		"_collection_link": "https://restless-eclipse-372273.postman.co/workspace/React-UI~94d0c14d-ec02-43a0-bbc5-08840a7c5cd8/collection/16489995-d0acc6d8-6b85-4a2b-a076-0a23bc45dcb7?action=share&creator=16489995&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"authUser1\",\r\n    \"email\":\"authUser1@coreapi.com\",\r\n    \"password\":\"Pass@word1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7103/api/Authenticate/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7103",
+							"path": [
+								"api",
+								"Authenticate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"authUser1\",\r\n    \"password\":\"Pass@word1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7103/api/Authenticate/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7103",
+							"path": [
+								"api",
+								"Authenticate",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetAllAgents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYXV0aFVzZXIxIiwianRpIjoiNzRmZTUyOTctZGMwNS00MzU2LWE2MzEtZGYyYzk2ODRmYzY5IiwiZXhwIjoxNjg1MTk4NjYwLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjcxMDMvIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo3MTAzIn0.UIL2LkmcuSPMSwnQ7glxrI6VsMds5OtcIOkL-bdZrfg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7103/api/Agent/GetAllAgents",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7103",
+					"path": [
+						"api",
+						"Agent",
+						"GetAllAgents"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
